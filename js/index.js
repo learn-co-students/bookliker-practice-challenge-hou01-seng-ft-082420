@@ -38,6 +38,8 @@ function displayBook(book){
     const subTitleH = document.createElement('h2')
     subTitleH.innerText = book.subtitle
 
+    const authorH = document.createElement('h2')
+    authorH.innerText = book.author
     const p = document.createElement('p')
     p.innerText = book.description
 
@@ -55,10 +57,10 @@ function displayBook(book){
     console.log(users.filter(user => (user.username == "pouros"))[0])
     console.log(puoros)
 
-    showDiv.append(img, titleH, subTitleH, p, userUl, button)
+    showDiv.append(img, titleH, subTitleH, authorH, p, userUl, button)
 
     button.addEventListener('click', e => {
-        // need something more dynamic, but in this particular lab
+        // Will need something more dynamic, but in this particular lab
         // puoros will always be the last element of an array.
         if(checkLikeStatus(users) == true){
             users.pop()
