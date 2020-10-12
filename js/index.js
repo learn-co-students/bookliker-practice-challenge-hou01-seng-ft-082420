@@ -40,6 +40,7 @@ function displayBook(book){
 
     const authorH = document.createElement('h2')
     authorH.innerText = book.author
+    
     const p = document.createElement('p')
     p.innerText = book.description
 
