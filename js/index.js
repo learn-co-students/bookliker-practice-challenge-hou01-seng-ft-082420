@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // const showPanel = document.querySelector('#show-panel')
     // const bookList = document.querySelector('#list')
 
-    fetch(URLBase).then(res => res.json()).then(books => books.forEach(book =>createBookCard(book)));
+    fetch(URLBase).then(res => res.json())
+    .then(books => books.forEach(book =>createBookCard(book)));
 
 
     function createBookCard (book) {
